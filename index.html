@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Universe Hub</title>
+    <!-- I am using bootstrap framework of CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/d6887e85de.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Area -->
+    <header class="text-center">
+        <h1 class="mt-3 fw-bolder">AI Universe Hub</h1>
+        <button id="sort-date" class="btn btn-danger px-4 py-3 rounded-3 mt-2">Sort By Date</button>
+    </header>
+    <!-- Main Area -->
+    <main class="container">
+        <!-- card section -->
+        <section>
+            <div id="card-container" class="row row-cols-1 row-cols-md-3 g-4 px-4 mt-4 mb-3">
+
+            </div>
+            <!-- See more button -->
+            <div id="show-more" class="px-4 text-center">
+                <button onclick="showMore()" class="fs-5 px-5 py-3 border-0 bg-danger text-white mb-4 rounded-3">See More</button>
+            </div>
+        </section>
+        <!-- spinner section -->
+        <section id="spinner" class="d-none">
+            <div class="d-flex justify-content-center mt-2 mb-5">
+                <div style="width: 3rem; height: 3rem;" class="spinner-border text-danger fs-3" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal section -->
+        <section>
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0 position-relative">
+                    <button style="width:50px;height:50px;background:#EB5757;" type="button" class=" border-0 position-absolute top-0 start-100 translate-middle rounded-5" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark text-white fs-5"></i></button>
+                </div>
+                <div id="modal-body" class="modal-body p-5">
+                    <div class="row gap-3">
+                        <div class="col rounded-3 p-3" style="background:#FEF7F7;border:1px solid #EB5757">
+                            <div class="mb-3">
+                                <div id="modal-price" class="">
+                                    <h3 id="heading" class="fs-4 w-75 ms-3"></h3>
+                                    <div class="row mx-4 mt-4 gap-3">
+                                        <div id="basic-pricing-container" style="width:130px;height:100px;color:#03A20A;" class="col cols-sm-1 cols-lg-3 bg-white rounded-3 d-flex justify-content-center align-items-center flex-column fw-bolder text-center">
+                                            
+                                        </div>
+                                        <div id="pro-pricing-container" style="width:130px;height:100px;color:#F28927;" class="col cols-sm-1 cols-lg-3 bg-white rounded-3 d-flex justify-content-center align-items-center flex-column fw-bolder text-center">
+                                            
+                                        </div>
+                                        <div id="contact-pricing-container" style="width:130px;height:100px;color:#EB5757;" class="col cols-sm-1 cols-lg-3 bg-white rounded-3 d-flex justify-content-center align-items-center flex-column fw-bolder text-center">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row px-2">
+                                <div class="col">
+                                    <h3>Features</h3>
+                                    <ul id="features-list">
+
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <h3>Integrations</h3>
+                                    <ul id="integrations-list">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col position-relative">
+                            <div id="modal-right" class="row-cols-sm-1 row-cols-lg-2 border border-1 rounded-3 p-3">
+                                
+                            </div>
+                            <div>
+                                <button id="accuracy-btn" style="background:#EB5757" class="btn text-white position-absolute top-0 end-0 fw-semibold"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </section>
+
+    </main>
+    <!-- Bootstrap Js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- My external js file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
